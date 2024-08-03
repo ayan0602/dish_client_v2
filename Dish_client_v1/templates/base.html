@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+        {% block head %}
+        
+
+        {% endblock %}
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+    </head>
+    <body>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        {% if nav == 'index' %}
+        <section class="header-gradient" style="height: 51px; width: 100%; position: fixed; top: 0%;">
+
+        <div class="navbartop header-gradient">
+            <ul>
+                <div class="app-heading">Dishalytics</div>
+
+                <li><a style="all:revert;" href="{{ url_for('dish_application')}}"><button>Explore</button></a></li>
+                <li><a href="">Contacts</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="{{ url_for('index')}}">Home</a></li>
+            </ul>
+        </div>
+    </section>
+        {% elif nav == 'app' %}
+        <section class="header-gradient" style="height: 51px; width: 100%; position: fixed; top: 0%;">
+        <div class="navbarapp">
+            <ul>
+                <div class="app-heading">Dishalytics</div>
+                <li><a href="" style="color:black;">Contacts</a></li>
+                <li><a href="" style="color:black;">About Us</a></li>
+                <li><a href="" style="color:black;">Pricing</a></li>
+                <li><a href="{{ url_for('index')}}" style="color:black;">Home</a></li>
+            </ul>
+        </div>
+    </section>
+        {% endif %}
+                {% block header %}
+                {% endblock %}
+            
+
+        {% block content %}
+        {% endblock %}
+        </body>
+</html>

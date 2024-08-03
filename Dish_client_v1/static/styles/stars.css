@@ -1,0 +1,214 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0px;
+    background-color: black;
+    color: white;
+}
+
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+canvas {
+    margin: 0px;    
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    z-index: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Adjust color to ensure text is visible against background */
+}
+
+
+.homebar{
+    display: grid;
+    place-items: center; /* Center horizontally */
+    position: fixed;     /* Fix the position */
+    top: 0;              /* Align to the top */
+    width: 100%;
+    height: auto;        /* Auto height to fit content */
+    padding: 10px;       /* Optional: padding around the content */
+    box-sizing: border-box; /* Include padding in height calculation */
+    overflow: hidden;
+    z-index: 999;
+}
+
+.barcontents{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border-color: white;
+    border-width: 5px;
+    color: white;
+    /*background-image: linear-gradient(to right, #76b3db, #333296);*/
+    background-color: #181818;
+    position: fixed;
+    top: 1%;
+    width: fit-content;
+    height: 5%;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.barleft{
+    display: flex;
+    float: left;
+    border-radius: 25px;
+    border-color: white;
+    border-width: 5px;
+    color: white;
+    background-color: #181818;
+    position: fixed;
+    top: 1%;
+    text-align: center;
+    z-index: 999;
+    width: fit-content;
+    border: 1px solid white;
+
+}
+
+.barcontents a, p{
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.right a, p{
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.contentleft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border-color: white;
+    border-width: 5px;
+    color: white;
+    background-color: #181818;
+    position: fixed;
+    top: 1%;
+    width: fit-content;
+    height: 5%;
+    text-align: center;
+    left: 1%;
+    border: 1px solid white;
+
+}
+
+
+.right {
+    position: fixed; /* Fixes the element in place relative to the viewport */
+    top: 1%; /* 1% from the top of the viewport */
+    right: 1%; /* 1% from the right of the viewport */
+    z-index: 999;
+    color: white;
+    width: 7%;
+    height: 5%;
+    border-radius: 25px;
+    background-color: #181818;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border: 1px solid white;
+
+}
+
+
+.barcontents a:hover {
+    color: red; /* Change color on hover */
+    animation: jiggle 0.3s ease; /* Apply jiggle animation */
+}
+
+.right a:hover {
+    color: red; /* Change color on hover */
+    animation: jiggle 0.3s ease; /* Apply jiggle animation */
+}
+
+@keyframes jiggle {
+    0% { transform: translateX(0); }
+    10% { transform: translateX(-5px); }
+    20% { transform: translateX(5px); }
+    30% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    50% { transform: translateX(-5px); }
+    60% { transform: translateX(5px); }
+    70% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    90% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.container-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    width: 30%;
+    height: 80%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+.box:hover{
+    transform: scale(1.1);
+}
+
+section{
+    text-align: center;
+}
+
+section a{
+    text-decoration: none;
+    padding: 12px 14px;
+    border-bottom: 2px solid red;
+    color: white;
+    font-size: 25px;
+}
+
+section a:hover{
+    color: red;
+}

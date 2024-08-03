@@ -1,0 +1,157 @@
+
+
+#content-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 5px;
+    height: fit-content;
+}
+
+.component{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius: 10px;
+    border-color: grey;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px 14px;
+    color: black;
+    margin-bottom: 5px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 3%;
+    height: 50px;
+    padding-bottom: 3%;
+}
+
+.container-text{
+    flex: 1;
+    text-align: center; /* Center the text within its container */
+    padding-right: 35%; /* Add space to the right to prevent overlap with buttons */
+    padding-left: 5%;
+    width: 30%
+}
+
+.escalation-text{
+    color: red;
+    padding: 0px 0px;
+    font-weight: bold;
+}
+
+.userlist{
+    color: #012738;
+    display: inline-block;
+    padding: 12px 14px;
+}
+
+.button-container{
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end; 
+    float: right;   
+    z-index: 999;
+}
+
+.actionList{
+    background-color: #012738;
+    margin-left: 10px;
+    margin-right: 10px;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid white;
+}
+.actionList:hover{
+    background-color: white;
+    color: #012738;
+    border: 1px solid grey
+}
+
+.mini-component{
+    border-right: 1px solid grey;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-radius: 10px;
+    border-color: grey;
+    text-align: center;
+    font-size: 20px;
+    padding: 12px 5px;
+    color: black;
+    /* Flex-grow allows the boxes to grow to fill the container */
+    flex-grow: 1;
+    /* Margin creates spacing between boxes */
+    margin: 0 10px;
+    /* Ensures boxes are sized responsively */
+    min-width: 0;    /* Adjust to your preferred height */
+    height: auto;
+    /* Centering text inside the box */
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
+.number{
+    color: #012738;
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold; /* Added bold to make the number stand out */
+    display: block; /* Ensure the number takes its own line */
+    margin: 0 auto; /* Center the number within the div */
+}
+
+.popup {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #012738;
+    color: white;
+    border: 1px solid white;
+    padding: 14px 16px;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+    z-index: 999;
+  }
+
+#resolved{
+    display: none;
+}
+
+
+.report-snapshot{
+    margin-left: 4px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.report-snapshot h1, h2, h3, h4, h5, h6 {
+    margin-left: 1%;
+}
+
+#sentiments{
+    display: inline-block;
+    width: 100%;
+}
+
+#sentiments p{
+    float: left;
+}
+
+.sentiment-text{
+    float: left;
+    text-align: center;
+    justify-content: center;
+    margin-right: 5%;
+}

@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/animations-styles.css') }}">
+{% endblock %}
+
+{% block title %}
+Dishalytics
+{% endblock %}
+{% block header %}
+
+{% endblock %}
+{% block content %}
+    <body onload="handleSlideShow()">
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        
+        
+        <section class="header-gradient">
+            <div class="spacing"></div>
+            
+            <div class="container-main">
+                <div class="left-div">
+                    <div class="parent-container-stacked">
+                        <div class="container heading-main">A Business <br>For Businesses</div>
+                        <br>
+                        <div class="container heading-main subheading">Improve your overall customer satisfaction through the power of Artificial Intelligence. We support local and small businesses like yours.</div>
+                        <br>
+                        <div class="container heading-main">
+                            <button>Explore</button>
+                            <button>Pricing</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-div">
+                    <div class="slideshow">
+                        <div class="slide">
+                            <h1>Avaliable on iPhone</h1>
+                            <p>Use on mobile for on-the-go analytics</p>
+                            <img src="{{ url_for('static', filename='media/image-removebg-preview.png') }}"
+                             alt="Image 1"
+                             width="225px"
+                             height="450px">
+                        </div>
+                        <div class="slide">
+                            <h1>Feature Rich Reports</h1>
+                            <p>View Analytics through online data that is parsed through a machine learning algorithm</p>
+                            <img src="{{ url_for('static', filename='media/placeholder-graphic.png') }}"
+                             alt="Image 2"
+                             width="500px"
+                             height="350px">
+                        </div>
+                        <div class="slide">
+                            <h1>Analytics Based on Customer Feedback</h1>
+                            <p>Customer feedback is essential for a succesful business. Our goal is to make your business succeed</p>
+                            <img src="{{ url_for('static', filename='media/placeholder-graphic-2.png') }}"
+                            alt="Image 3"
+                            width="500px"
+                             height="350px">
+                        </div>
+                        <div class="slide">
+                            <h1>Guarenteed Customer Satisfaction</h1>
+                            <p>Our algorithms will ensure your customers' suggestions will be implemented into your business</p>
+                            <img src="{{ url_for('static', filename='media/placeholder-graphic-3.jpg') }}"
+                            alt="Image 4"
+                            width="500px"
+                             height="350px">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="spacing"></div>
+        </section>
+
+        <section>
+            
+        </section>
+
+        <section>
+            <canvas id="canvas" width="500" height="150"></canvas>
+        </section>
+        
+        <script src="{{ url_for('static', filename='scripts/index.js') }}" async defer></script>
+    </body>
+    {% endblock %}

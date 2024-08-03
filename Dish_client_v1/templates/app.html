@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/app.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/piechart.css') }}">
+{% endblock%}
+
+{% block title %}
+Dishalytics API App
+{% endblock%}
+{% block header %}
+{% endblock %}
+{% block content %}
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div style="margin-bottom: 5%;"></div>
+        
+        <h1 id="business-title">[Your Business]</h1>
+
+        
+
+        <div class="report-snapshot">
+            <h2>Report Snapshot</h2>
+
+            <div id="content-top"></div>
+
+            <div id="sentiments">
+                <h2>Sentiment Analysis</h2>
+                <p style="margin-left: 2%; font-size: large;">This feature is not yet implemented. These are placeholder statements for the time being
+                <br>
+                Your customers are overall satisfied with your business
+                <br>
+                The most common suggestion is adding more food choices
+                <br>
+                What your business does best is serving food on time
+                <br>
+                </p>
+                <div class="pie animate" style="--p:86.7;--c:lightgreen;">86.7%</div>
+            </div>
+
+               
+            <div id="content">
+                <h2>Customer Suggestions</h2>
+            </div>
+
+            <div id="resolved">
+                <h2>Resolved</h2>
+            </div>
+
+            
+        </div>
+      
+
+        <div class="popup" id="popup"></div>
+        <script type="module" src=" {{ url_for('static', filename='./scripts/app.js') }} " async defer ></script>
+
+    </body>
+{% endblock %}

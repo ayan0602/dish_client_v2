@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dishalytics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/stars.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/piechart.css') }}">
+
+</head>
+<body>
+    <div class="maincontainer">
+    <div class="homebar">
+            <div class="barcontents">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+            </div>
+        </div>
+
+    <div class="right">
+        <a href="{{ url_for('dish_application') }}">App</a>
+    </div>
+
+    <div class="barleft">
+            <div class="contentleft">
+                <p>Dishalytics</p>
+            </div>
+        </div>
+
+        
+
+    <div class="parallax">
+        
+        <canvas id="starsCanvas"></canvas>
+        
+
+        <div class="parent-container-stacked text-overlay">
+            <div class="container heading-main">A Business <br>For Businesses</div>
+            <br>
+            <div class="container heading-main subheading">Improve your overall customer satisfaction through the power of Artificial Intelligence. We support local and small businesses like yours.</div>
+            <br>
+            <div class="container heading-main">
+                <button onClick="document.getElementById('explore1').scrollIntoView();">Explore</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section id='explore1' style="background-color: white;">
+        <div class="container-middle">
+            <div class="box">
+                <h1>Real Time Analysis</h1>
+                <p>Our algorithms scrape every corner of the web,
+                    allowing us to show what customers think of your business</p>
+                <div id="container-middle-pie" class="pie " style="--p:86.7;--c:lightgreen;z-index: 800;" onload="AnimatePieOnLoad('container-middle-pie')">Ψ</div>
+
+            </div>
+            <div class="box">
+                <h1>AI Powered Tools</h1>
+                <p>Our in-house Artifical Intelligence models process reviews and 
+                    save you from having to read thousands of reviews
+                </p>
+            </div>
+
+            <div class="box">
+                <h1>One Stop Shop</h1>
+                <p>You no longer need to keep track of various review websites, Dishalytics offers a one stop shop solution</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="spacing"></div>
+
+        <h1>Dishalytics is still currently under development</h1>
+        <h2>A prototype of this version is avaliable</h2>
+        <a href="{{ url_for('dish_application') }}">Click Me!</a>
+        <div class="spacing"></div>
+
+    </section>
+        
+
+    </div>
+    <script src="{{ url_for('static', filename='scripts/stars.js') }}"></script>
+</body>
+</html>
